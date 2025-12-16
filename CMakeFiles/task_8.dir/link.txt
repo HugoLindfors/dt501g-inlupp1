@@ -1,1 +1,0 @@
-/usr/bin/cc  -Wall -std=c99 -g -O0 -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/task_8.dir/task_8.c.o -o task_8
