@@ -1,4 +1,0 @@
-double montecarlo()
-{
-        double area;
-}
