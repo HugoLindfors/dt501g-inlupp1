@@ -1,0 +1,4 @@
+double montecarlo()
+{
+        double area;
+}
