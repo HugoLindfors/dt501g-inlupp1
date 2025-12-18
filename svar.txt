@@ -1,0 +1,20 @@
+Fråga 1.
+    1000 ggr. - rätt heltal med god säkerhet
+    10000 ggr. - en rätt decimal med god säkerhet
+    1000000 ggr. - två korrekta decimaler med god säkerhet
+
+Fråga 2.
+    Med 1,000,000 iterationer, två decimalers nogrannhet.
+
+Fråga 3.
+    Programmet fortsätter till ett valt antal iterationer.
+
+Fråga 4.
+    0000 0000
+    0000 1000
+    0000 1010
+
+Fråga 5. (Ingen skillnad)
+    0000 0000
+    0000 1000
+    0000 1010

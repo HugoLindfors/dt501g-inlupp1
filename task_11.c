@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define NUMBER_OF_ITERATIONS 1000000
+
 double randomdouble(double min, double max)
 {
         double range = (max - min);
@@ -48,7 +50,7 @@ double montecarlo(double r)
         double A = 0;
         long i = 0;
 
-        while (i < 1000)
+        while (i < NUMBER_OF_ITERATIONS)
         {
                 i += 1;
                 double x = randomdouble(-r, r);
