@@ -13,7 +13,7 @@ void printrange(int start, int step, int stop)
 {
         for (int i = start; i < stop; i += step)
                 if (isvalidnum(i))
-                        printf("%d, ", i);
+                        printf("%d ", i);
         printf("%d\n", stop);
 }
 

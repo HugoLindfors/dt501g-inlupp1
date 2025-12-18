@@ -3,92 +3,34 @@
 #include <stdlib.h>
 #include <string.h>
 
-int max(int *arr, int count);
-int min(int *arr, int count);
-
-int main(void)
-{
-        int *nums = NULL;
-        int count = 0;
-        char input[16];
-
-        printf("Enter numbers (enter :q to quit):\n");
-
-        while (true)
-        {
-                if (!scanf("%15s", input))
-                        break;
-
-                if (!strcmp(input, ":q"))
-                        break;
-
-                int value = atoi(input);
-
-                if (!value && input[0] != '0')
-                {
-                        printf("Invalid input\n");
-                        continue;
-                }
-
-                ++count;
-                int *tmp = realloc(nums, count * sizeof(int));
-
-                if (tmp == NULL)
-                {
-                        printf("Memory allocation failed\n");
-                        free(nums);
-                        return 1;
-                }
-
-                nums = tmp;
-                nums[count - 1] = value;
-        }
-
-        if (count > 0)
-        {
-                int maxval = max(nums, count);
-                int minval = min(nums, count);
-                printf("Count: %d, Max: %d, Min: %d\n", count, maxval, minval);
-        }
-
-        else
-        {
-                printf("No numbers entered\n");
-        }
-
-        free(nums);
-
-        return 0;
-}
-
-int max(int *arr, int count)
+int max(int count, int *numbers)
 {
         if (!count)
                 return 0;
 
-        int maxval = arr[0];
+        int maxval;
 
         for (int i = 1; i < count; ++i)
         {
-                if (arr[i] > maxval)
-                        maxval = arr[i];
+                if (numbers[i] > maxval)
+                        maxval = numbers[i];
         }
 
         return maxval;
 }
 
-int min(int *arr, int count)
+int main(int argc, char *argv[])
 {
-        if (!count)
-                return 0;
+        int numbers[3];
 
-        int minval = arr[0];
+        numbers[0] = atoi(argv[1]);
+        numbers[1] = atoi(argv[2]);
+        numbers[2] = atoi(argv[3]);
 
-        for (int i = 1; i < count; ++i)
-        {
-                if (arr[i] < minval)
-                        minval = arr[i];
-        }
+        int count = 3;
 
-        return minval;
+        int maxval = max(count, numbers);
+        printf("%d\n", maxval);
+
+        return 0;
 }

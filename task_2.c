@@ -20,7 +20,7 @@ double circumference(double r)
 
 double area(double r)
 {
-        return PI * pow(r, 2);
+        return PI * r * r;
 }
 
 int main(int argc, char *argv[])

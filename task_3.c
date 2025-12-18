@@ -20,15 +20,13 @@ double circumference(double r)
 
 double area(double r)
 {
-        return PI * pow(r, 2);
+        return PI * r * r;
 }
 
-int main(void)
+int main(int argc, char *argv[])
 {
         circle_t circle;
-        float radius;
-        printf("\nEnter radius: ");
-        scanf("%f", &radius);
+        float radius = strtod(argv[1], NULL);
 
         circle.radius = radius;
         circle.area = area(radius);

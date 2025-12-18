@@ -1,42 +1,33 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void printtime(int h24, int min)
 {
 
-        if ((0 >= h24 || h24 > 24) && (0 >= min || min > 60))
+        int i = 0;
+        while (i <= h24)
         {
-                printf("ERROR");
+                int j = 0;
+                while (j < 60)
+                {
+                        printf("%02d:%02d\n", i, j);
+                        j += 10;
+                }
+                ++i;
         }
 
-        else
+        int j = 0;
+        while (j <= min)
         {
-                int i = 0;
-                while (i <= h24)
-                {
-                        int j = 0;
-                        while (j < 60)
-                        {
-                                printf("%d:%02d\n", i, j);
-                                ++j;
-                        }
-                        ++i;
-                }
-
-                int j = 0;
-                while (j <= min)
-                {
-                        printf("%d:%02d\n", h24, j);
-                        ++j;
-                }
+                printf("%02d:%02d\n", h24, j);
+                j += 10;
         }
 }
 
-int main(void)
+int main(int argc, char *argv[])
 {
-        int h24;
-        int min;
-        printf("\nEnter time (h:mm): ");
-        scanf("%d:%d", &h24, &min);
+        int h24 = atoi(argv[1]);
+        int min = atoi(argv[2]);
         printtime(h24, min);
         return 0;
 }
