@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
         printf("Hugo Lindfors\n");
         printf("huglih251@edunet.oru.se\n");
