@@ -3,7 +3,7 @@
 void printtime(int h24, int min)
 {
 
-        if (0 >= h24 || h24 > 24 && 0 >= min || min > 60)
+        if ((0 >= h24 || h24 > 24) && (0 >= min || min > 60))
         {
                 printf("ERROR");
         }

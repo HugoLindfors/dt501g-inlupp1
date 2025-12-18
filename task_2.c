@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-static const double RADIUS = (2.0);
+#define PI 3.14159265358979323846264338327950288
 
 struct circle
 {
@@ -15,22 +15,24 @@ typedef struct circle circle_t;
 
 double circumference(double r)
 {
-        return 2 * M_PI * r;
+        return 2 * PI * r;
 }
 
 double area(double r)
 {
-        return M_PI * pow(r, 2);
+        return PI * pow(r, 2);
 }
 
-int main(void)
+int main(int argc, char *argv[])
 {
+        double radius = strtod(argv[1], NULL);
+
         circle_t circle;
         printf("\nEnter radius: ");
 
-        circle.radius = RADIUS;
-        circle.area = area(RADIUS);
-        circle.circumference = circumference(RADIUS);
+        circle.radius = radius;
+        circle.area = area(radius);
+        circle.circumference = circumference(radius);
 
         printf("\nArea: ~ %g"
                "\nCircumference: ~ %g"
