@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define PI M_PI
-
 static const double RADIUS = (2.0);
 
 struct circle
@@ -17,12 +15,12 @@ typedef struct circle circle_t;
 
 double circumference(double r)
 {
-        return 2 * PI * r;
+        return 2 * M_PI * r;
 }
 
 double area(double r)
 {
-        return PI * pow(r, 2);
+        return M_PI * pow(r, 2);
 }
 
 int main(void)
